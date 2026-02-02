@@ -31,9 +31,3 @@
 - 추유나
 
 ---
-
-## Getting Started
-
-```bash
-
-```
