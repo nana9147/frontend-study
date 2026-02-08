@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="/src/components/interior/styles/interior-home.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const cardGrid = document.getElementById("cardGrid");
+        const prevBtn = document.querySelector(".slide-btn.prev");
+        const nextBtn = document.querySelector(".slide-btn.next");
+
+        const CARD_WIDTH = 235;
+        const VISIBLE_COUNT = 4;
+        const TOTAL_CARDS = cardGrid.children.length;
+
+        let currentIndex = 0;
+        const maxIndex = TOTAL_CARDS - VISIBLE_COUNT;
+
+        nextBtn.addEventListener("click", () => {
+          if (currentIndex < maxIndex) {
+            currentIndex++;
+            cardGrid.style.transform = `translateX(-${currentIndex * CARD_WIDTH}px)`;
+          }
+        });
+
+        prevBtn.addEventListener("click", () => {
+          if (currentIndex > 0) {
+            currentIndex--;
+            cardGrid.style.transform = `translateX(-${currentIndex * CARD_WIDTH}px)`;
+          }
+        });
+      });
+    </script>
+
+    <title>인테리어 홈</title>
+  </head>
+  <body>
+    <div class="location-bar">
+      <div class="address-group">
+        <span class="address-text">서울특별시 노원구 중계동 512</span>
+        <button type="button" class="btn-change">주소변경</button>
+      </div>
+    </div>
+
+    <h2 class="button-title">이런 시공 서비스는 어떠세요?</h2>
+    <nav class="button-container">
+      <a href="/" class="button-item">
+        <div class="icon-box">
+          <img
+            src="/src/assets/images/calculator-small-dark-blue.svg"
+            alt=""
+            width="44"
+            height="44"
+          />
+        </div>
+        <p class="button-label">견적계산기</p>
+      </a>
+    </nav>
+
+    <hr />
+
+    <div class="partner-list">
+      <a href="#" class="partner-card">
+        <div class="image-container">
+          <div class="main-img">
+            <img
+              src="/src/assets/images/card-main.avif"
+              alt=""
+              width="233px"
+              height="204px"
+            />
+          </div>
+          <div class="sub-imgs">
+            <div class="sub-img">
+              <img
+                src="/src/assets/images/card-sub1.avif"
+                alt=""
+                width="101px"
+                height="101px"
+              />
+            </div>
+            <div class="sub-img">
+              <img
+                src="/src/assets/images/card-sub2.avif"
+                alt=""
+                width="101px"
+                height="101px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="info-container">
+          <div class="badge-standard">오늘의집 스탠다드</div>
+          <h3 class="company-name">주식회사 베네스타 인테리어</h3>
+          <div class="rating-row">
+            <span class="star">5.0</span>
+            <span class="review">리뷰 28</span>
+            <span class="contract">최근계약 15</span>
+          </div>
+          <div class="tags"><span class="tag">책임보장</span></div>
+        </div>
+      </a>
+    </div>
+    <a href="/" class="more">업체 더보기 ></a>
+
+    <hr />
+
+    <div class="slider-wrapper">
+      <button class="slide-btn prev" aria-label="이전">‹</button>
+      <div class="slider-viewport">
+        <div class="card-grid" id="cardGrid">
+          <article class="case-card">
+            <a href="#" class="card-link">
+              <div class="case-image-wrap">
+                <img src="/src/assets/images/mapo.avif" alt="" />
+              </div>
+              <div class="card-content">
+                <p class="case-category">20평대 • 서울특별시 마포구</p>
+                <p class="case-title">
+                  큰맘 먹고 인테리어를 하려 덕이동에 위치한 매장에 방문했어요...
+                </p>
+                <p class="case-author">유앤아이디자인</p>
+              </div>
+            </a>
+          </article>
+
+          <article class="case-card">
+            <a href="#" class="card-link">
+              <div class="case-image-wrap">
+                <img src="/src/assets/images/mangpo.avif" alt="" />
+              </div>
+              <div class="card-content">
+                <p class="case-category">40평대 • 서울특별시 망포구</p>
+                <p class="case-title">
+                  20년 넘은 구축이라는게 믿기지 않을 정도로 대변신에
+                  성공했습니다...
+                </p>
+                <p class="case-author">인바이디자인</p>
+              </div>
+            </a>
+          </article>
+          <article class="case-card">
+            <a href="#" class="card-link">
+              <div class="case-image-wrap">
+                <img src="/src/assets/images/mangpo.avif" alt="" />
+              </div>
+              <div class="card-content">
+                <p class="case-category">40평대 • 서울특별시 망포구</p>
+                <p class="case-title">
+                  20년 넘은 구축이라는게 믿기지 않을 정도로 대변신에
+                  성공했습니다...
+                </p>
+                <p class="case-author">인바이디자인</p>
+              </div>
+            </a>
+          </article>
+          <article class="case-card">
+            <a href="#" class="card-link">
+              <div class="case-image-wrap">
+                <img src="/src/assets/images/mangpo.avif" alt="" />
+              </div>
+              <div class="card-content">
+                <p class="case-category">40평대 • 서울특별시 망포구</p>
+                <p class="case-title">
+                  20년 넘은 구축이라는게 믿기지 않을 정도로 대변신에
+                  성공했습니다...
+                </p>
+                <p class="case-author">인바이디자인</p>
+              </div>
+            </a>
+          </article>
+          <article class="case-card">
+            <a href="#" class="card-link">
+              <div class="case-image-wrap">
+                <img src="/src/assets/images/mangpo.avif" alt="" />
+              </div>
+              <div class="card-content">
+                <p class="case-category">40평대 • 서울특별시 망포구</p>
+                <p class="case-title">
+                  20년 넘은 구축이라는게 믿기지 않을 정도로 대변신에
+                  성공했습니다...
+                </p>
+                <p class="case-author">인바이디자인</p>
+              </div>
+            </a>
+          </article>
+          <article class="case-card">
+            <a href="#" class="card-link">
+              <div class="case-image-wrap">
+                <img src="/src/assets/images/mangpo.avif" alt="" />
+              </div>
+              <div class="card-content">
+                <p class="case-category">40평대 • 서울특별시 망포구</p>
+                <p class="case-title">
+                  20년 넘은 구축이라는게 믿기지 않을 정도로 대변신에
+                  성공했습니다...
+                </p>
+                <p class="case-author">인바이디자인</p>
+              </div>
+            </a>
+          </article>
+          <article class="case-card">
+            <a href="#" class="card-link">
+              <div class="case-image-wrap">
+                <img src="/src/assets/images/mangpo.avif" alt="" />
+              </div>
+              <div class="card-content">
+                <p class="case-category">40평대 • 서울특별시 망포구</p>
+                <p class="case-title">
+                  20년 넘은 구축이라는게 믿기지 않을 정도로 대변신에
+                  성공했습니다...
+                </p>
+                <p class="case-author">인바이디자인</p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+
+      <button class="slide-btn next" aria-label="다음">›</button>
+    </div>
+
+    <hr />
+
+    <section
+      class="direct-service-section"
+      aria-labelledby="direct-service-title"
+    >
+      <div class="container">
+        <h2 id="direct-service-title" class="section-title">
+          오늘의집이 직접하는 시공 서비스
+        </h2>
+
+        <ul class="service-list">
+          <li class="service-item">
+            <article class="service-card">
+              <a href="/" class="service-link">
+                <figure class="service-figure">
+                  <img
+                    src="/src/assets/images/card-main.avif"
+                    alt="미니멀한 주방 인테리어 시공 사례"
+                    class="service-img"
+                  />
+
+                  <figcaption class="service-info">
+                    <span class="category">주방</span>
+                    <h3 class="service-name">오늘의집 키친</h3>
+                    <p class="service-desc">중간마진 없는 합리적 가격</p>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+
+          <li class="service-item">
+            <article class="service-card">
+              <a href="/" class="service-link">
+                <figure class="service-figure">
+                  <img
+                    src="/src/assets/images/card-main.avif"
+                    alt="깔끔한 도배 시공 사례"
+                    class="service-img"
+                  />
+                  <figcaption class="service-info">
+                    <span class="category">도배</span>
+                    <h3 class="service-name">오늘의집 도배</h3>
+                    <p class="service-desc">리뷰가 검증한 시공 품질</p>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+
+          <li class="service-item">
+            <article class="service-card">
+              <a href="/" class="service-link">
+                <figure class="service-figure">
+                  <img
+                    src="/src/assets/images/card-main.avif"
+                    alt="원목 마루 바닥 시공 사례"
+                    class="service-img"
+                  />
+                  <figcaption class="service-info">
+                    <span class="category">마루/장판</span>
+                    <h3 class="service-name">오늘의집 마루</h3>
+                    <p class="service-desc">20년 경력 베테랑 시공팀</p>
+                  </figcaption>
+                </figure>
+              </a>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>

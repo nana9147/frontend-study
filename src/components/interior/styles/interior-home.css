@@ -1,0 +1,350 @@
+/* 상단 주소 영역 */
+.location-bar {
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #fff;
+  border-bottom: 1px solid #f4f4f4;
+}
+/* 주소 텍스트 + 변경 버튼
+   - 양 끝 정렬 */
+.address-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #2f3438;
+}
+/* 주소 변경 버튼 */
+.btn-change {
+  background: none;
+  border: none;
+  color: #35c5f0;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 아이콘 버튼 */
+.button-container {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+}
+
+.button-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  gap: 8px;
+}
+/* 아이콘 배경 */
+.icon-box {
+  width: 64px;
+  height: 64px;
+  background-color: #f2f4f7;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 아이콘 하단 텍스트 */
+.button-label {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* 슬라이드 전체 컨테이너 */
+.slider-wrapper {
+  position: relative;
+  margin: 0 auto;
+}
+/* 사용자에게 보이는 영역 */
+.slider-viewport {
+  width: 1136px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* 카드 이동	 */
+.card-grid {
+  display: flex; /* 가로 나열 */
+  gap: 15px;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* 개별 카드 */
+.case-card {
+  flex: 0 0 220px; /* 카드 너비 고정 */
+  text-decoration: none;
+  color: inherit;
+}
+/* 카드 이미지 래퍼 */
+.case-image-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.case-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 카드 텍스트 정보 */
+.card-link {
+  font-size: 16px;
+  text-decoration-line: none;
+}
+
+.case-category {
+  display: block;
+  font-weight: 700;
+  color: #2f3438;
+  margin-bottom: 4px;
+}
+
+.case-title {
+  line-height: 1.5;
+  color: #424242;
+  margin-bottom: 4px;
+}
+
+.case-author {
+  color: #828c94;
+}
+
+/* 좌우 버튼 */
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #eaedef;
+  background: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.slide-btn.prev {
+  left: 250px;
+}
+
+.slide-btn.next {
+  right: 250px;
+}
+
+/* 기존 업체 카드 스타일*/
+.partner-card {
+  display: block;
+  width: 300px;
+  text-decoration: none;
+  color: #2f3438;
+  margin-bottom: 10px;
+}
+
+.partner-list {
+  width: 1136px;
+  margin: 0 auto;
+}
+
+/* 이미지 묶음 */
+.image-container {
+  display: flex;
+  gap: 2px;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 336px;
+  height: 216px;
+}
+
+.main-img {
+  flex: 2;
+}
+.main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sub-imgs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.sub-img {
+  height: 50%;
+}
+
+.sub-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 업체정보 텍스트	 */
+.info-container {
+  padding: 10px 4px;
+}
+.badge-standard {
+  font-size: 11px;
+  font-weight: bold;
+  color: #35c5f0;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.badge-standard::before {
+  content: "✔";
+  margin-right: 3px;
+  font-size: 10px;
+}
+.company-name {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 4px 0;
+  line-height: 1.4;
+}
+
+.rating-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #828c94;
+  margin-bottom: 8px;
+}
+
+.star::before {
+  content: "★";
+  color: #35c5f0;
+  margin-right: 2px;
+}
+
+.tags .tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  color: #1dbb7e;
+  background-color: #fff;
+  border: 1px solid #eaedef;
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+/*  더보기 버튼 */
+.more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1136px;
+  height: 44px;
+  margin: 20px auto;
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid #eaedef;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #2f3438;
+}
+
+/* 섹션 전체 컨테이너 */
+.direct-service-section {
+  padding: 40px 16px;
+  max-width: 1136px;
+  margin: 0 auto;
+}
+
+.direct-service-section .section-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #2f3438;
+}
+
+/* 서비스 리스트 (가로 배열) */
+.service-list {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-item {
+  flex: 1; /* 카드들이 동일한 너비를 가짐 */
+}
+
+/* 서비스 카드 디자인 */
+.service-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden; /* 모서리 둥글게 적용 */
+  aspect-ratio: 16 / 9;
+}
+
+.service-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.service-figure {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.service-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 이미지 위 텍스트 오버레이  */
+.service-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* 텍스트를 하단으로 정렬 */
+
+  color: #ffffff;
+}
+
+.service-info .category {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  opacity: 0.9;
+}
+
+.service-info .service-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+.service-info .service-desc {
+  font-size: 13px;
+  margin: 0;
+  opacity: 0.8;
+}
